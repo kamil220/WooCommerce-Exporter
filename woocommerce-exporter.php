@@ -45,13 +45,13 @@ $plugin_file        = __FILE__;
 $plugin_dir         = dirname( __FILE__ );
 
 $requirements = [
-	'php'     => '5.6',
-	'wp'      => '4.5',
+	'php'     => '7.1',
+	'wp'      => '5.6',
 	'plugins' => [
 		[
 			'name'      => 'woocommerce/woocommerce.php',
 			'nice_name' => 'WooCommerce',
-			'version'   => '3.0',
+			'version'   => '4.9.0',
 		],
 	],
 ];
