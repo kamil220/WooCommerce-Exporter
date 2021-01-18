@@ -23,13 +23,13 @@
 	"config": {
 		"sort-packages": true,
 		"platform": {
-			"php": "5.6"
+			"php": "7.1"
 		}
 	},
 	"prefer-stable": true,
 	"minimum-stability": "stable",
 	"require": {
-		"php": ">=5.6",
+		"php": ">=7.1",
 		"wpdesk/wp-wpdesk-helper-override": "^1.1.0",
 		"psr/log": "^1.0.1"
 	},
@@ -44,7 +44,7 @@
 		"text-domain": "woocommerce-exporter",
 		"translations-folder": "lang",
 		"translation-file-headers": {
-			"Project-Id-Version": "Plugin Template",
+			"Project-Id-Version": "Woocommerce Exporter",
 			"Last-Translator": "Grzegorz Rola <grola@wpdesk.pl>",
 			"X-Poedit-WPHeader": "woocommerce-exporter.php"
 		},
