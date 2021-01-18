@@ -1,0 +1,8 @@
+/vendor/
+/vendor_prefixed/
+.idea
+build-coverage
+.DS_Store
+.commit
+lang/plugin-template-pl_PL.po
+lang/plugin-template-pl_PL.mo

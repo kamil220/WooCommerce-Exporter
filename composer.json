@@ -1,0 +1,62 @@
+{
+	"name": "wpdesk/plugin-template",
+	"authors": [
+		{
+			"name": "Krzysiek",
+			"email": "krzysiek@wpdesk.net"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"WPDesk\\PluginTemplate\\": "src/Plugin"
+		},
+		"classmap": [
+			"vendor_prefixed"
+		]
+	},
+	"autoload-dev": {
+		"classmap": [
+			"tests/unit",
+			"tests/integration"
+		]
+	},
+	"config": {
+		"sort-packages": true,
+		"platform": {
+			"php": "5.6"
+		}
+	},
+	"prefer-stable": true,
+	"minimum-stability": "stable",
+	"require": {
+		"php": ">=5.6",
+		"wpdesk/wp-wpdesk-helper-override": "^1.1.0",
+		"psr/log": "^1.0.1"
+	},
+	"require-dev": {
+		"10up/wp_mock": "*",
+		"wpdesk/wp-plugin-flow": "^2",
+		"phpunit/phpunit": "<7",
+		"wpdesk/wp-wpdesk-composer": "^2.2",
+		"wpdesk/wp-codeception": "^1.1.13"
+	},
+	"extra": {
+		"text-domain": "plugin-template",
+		"translations-folder": "lang",
+		"translation-file-headers": {
+			"Project-Id-Version": "Plugin Template",
+			"Last-Translator": "Grzegorz Rola <grola@wpdesk.pl>",
+			"X-Poedit-WPHeader": "plugin-template.php"
+		},
+		"po-files": {
+			"pl_PL": "pl_PL.po"
+		}
+	},
+	"scripts": {
+		"test": "echo composer is alive",
+		"phpcs": "phpcs",
+		"phpunit-unit": "phpunit --configuration phpunit-unit.xml --coverage-text --colors=never",
+		"phpunit-integration": "phpunit --configuration phpunit-integration.xml --coverage-text --colors=never",
+		"docs": "apigen generate"
+	}
+}
