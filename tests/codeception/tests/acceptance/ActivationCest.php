@@ -36,7 +36,7 @@ class ActivationCest extends Cest {
 		$i->activateWPDeskPlugin(
 			$this->getPluginSlug(),
 			array( 'woocommerce' ),
-			array( 'The “WP Desk Plugin Template” plugin cannot run without WooCommerce active. Please install and activate WooCommerce plugin.' )
+			array( 'The “WP Desk WooCommerce Exporter” plugin cannot run without WooCommerce active. Please install and activate WooCommerce plugin.' )
 		);
 
 	}

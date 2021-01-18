@@ -4,5 +4,5 @@
 build-coverage
 .DS_Store
 .commit
-lang/plugin-template-pl_PL.po
-lang/plugin-template-pl_PL.mo
+lang/woocommerce-exporter-pl_PL.po
+lang/woocommerce-exporter-pl_PL.mo

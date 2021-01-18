@@ -1,16 +1,16 @@
 <?php
 /**
-	Plugin Name: WP Desk Plugin Template
-	Plugin URI: https://www.wpdesk.net/products/plugin-template/
-	Description: WP Desk Plugin Template
-	Product: WP Desk Plugin Template
+	Plugin Name: WP Desk WooCommerce Exporter
+	Plugin URI: https://www.wpdesk.net/products/woocommerce-exporter/
+	Description: WP Desk WooCommerce Exporter
+	Product: WP Desk WooCommerce Exporter
 	Version: 1.0
 	Author: WP Desk
 	Author URI: https://www.wpdesk.net/
-	Text Domain: plugin-template
+	Text Domain: woocommerce-exporter
 	Domain Path: /lang/
 
-	@package \WPDesk\PluginTemplate
+	@package \WPDesk\WoocommerceExporter
 
 	Copyright 2016 WP Desk Ltd.
 
@@ -37,10 +37,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 $plugin_version           = '1.0.0';
 $plugin_release_timestamp = '2019-11-29 19:01';
 
-$plugin_name        = 'WP Desk Plugin Template';
-$plugin_class_name  = '\WPDesk\PluginTemplate\Plugin';
-$plugin_text_domain = 'plugin-template';
-$product_id         = 'plugin-template';
+$plugin_name        = 'WP Desk WooCommerce Exporter';
+$plugin_class_name  = '\WPDesk\WoocommerceExporter\Plugin';
+$plugin_text_domain = 'woocommerce-exporter';
+$product_id         = 'woocommerce-exporter';
 $plugin_file        = __FILE__;
 $plugin_dir         = dirname( __FILE__ );
 

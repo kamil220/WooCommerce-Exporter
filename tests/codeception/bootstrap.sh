@@ -1,7 +1,7 @@
 #!/bin/bash
 
-export WPDESK_PLUGIN_SLUG=wp-desk-plugin-template
-export WPDESK_PLUGIN_TITLE="WP Desk Plugin Template"
+export WPDESK_PLUGIN_SLUG=wp-desk-woocommerce-exporter
+export WPDESK_PLUGIN_TITLE="WP Desk WooCommerce Exporter"
 
 export WOOTESTS_IP=${WOOTESTS_IP:wootests}
 

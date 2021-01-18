@@ -15,7 +15,7 @@ parameters:
     excludes_analyse:
         - %currentWorkingDirectory%/src/Plugin/view/
     ignoreErrors:
-        - '/PluginTemplateVendor\\WPDesk_Plugin_Info/'
+        - '/WoocommerceExporterVendor\\WPDesk_Plugin_Info/'
 
 #    autoload_files:
 #        # Missing constants, function and class stubs
