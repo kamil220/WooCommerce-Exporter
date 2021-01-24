@@ -14,6 +14,7 @@ use WoocommerceExporterVendor\WPDesk_Plugin_Info;
 use WoocommerceExporterVendor\WPDesk\PluginBuilder\Plugin\AbstractPlugin;
 use WoocommerceExporterVendor\WPDesk\PluginBuilder\Plugin\HookableCollection;
 use WoocommerceExporterVendor\WPDesk\PluginBuilder\Plugin\HookableParent;
+use Symfony\Component\EventDispatcher\Tests\Service;
 
 /**
  * Main plugin class. The most important flow decisions are made here.
@@ -23,6 +24,15 @@ use WoocommerceExporterVendor\WPDesk\PluginBuilder\Plugin\HookableParent;
 class Plugin extends AbstractPlugin implements LoggerAwareInterface, HookableCollection {
 	use LoggerAwareTrait;
 	use HookableParent;
+
+	const WOOCOMMERCE_EXPORTER_MENU_PRIORITY = 30;
+
+	/**
+	 * Export page class adds submenu into admin dashboard
+	 *
+	 * @var Services\ExportPage\Page
+	 */
+	protected $export_page;
 
 	/**
 	 * Plugin constructor.
@@ -35,6 +45,9 @@ class Plugin extends AbstractPlugin implements LoggerAwareInterface, HookableCol
 
 		$this->plugin_url       = $this->plugin_info->get_plugin_url();
 		$this->plugin_namespace = $this->plugin_info->get_text_domain();
+
+		$this->export_page = new Services\ExportPage\Page();
+
 	}
 
 	/**
@@ -56,5 +69,20 @@ class Plugin extends AbstractPlugin implements LoggerAwareInterface, HookableCol
 	 */
 	public function hooks() {
 		parent::hooks();
+
+		$this->add_export_page();
+	}
+
+	/**
+	 * Add page if helper exists
+	 *
+	 * @return void
+	 */
+	private function add_export_page() {
+		\add_action(
+			'admin_menu', function () {
+				$this->export_page->handle_add_page_submenu_item();
+			}, self::WOOCOMMERCE_EXPORTER_MENU_PRIORITY
+		);
 	}
 }
