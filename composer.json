@@ -30,8 +30,9 @@
 	"minimum-stability": "stable",
 	"require": {
 		"php": ">=7.1",
-		"wpdesk/wp-wpdesk-helper-override": "^1.1.0",
-		"psr/log": "^1.0.1"
+		"league/csv": "^9.5",
+		"psr/log": "^1.0.1",
+		"wpdesk/wp-wpdesk-helper-override": "^1.1.0"
 	},
 	"require-dev": {
 		"10up/wp_mock": "*",
