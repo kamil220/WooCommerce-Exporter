@@ -122,4 +122,19 @@ class Product {
 
 		return implode( self::SEPARATOR_SIGN, $categories );
 	}
+
+	/**
+	 * Get array ready for export
+	 *
+	 * @return array
+	 */
+	public function get_export_array() {
+		return [
+			'name'          => $this->name,
+			'categories'    => $this->categories,
+			'sku'           => $this->sku,
+			'price'         => $this->price,
+			'regular_price' => $this->regular_price,
+		];
+	}
 }
