@@ -31,7 +31,8 @@ if ( ! \defined( 'ABSPATH' ) ) {
 		/**
 		 * Add WordPress submit button
 		 */
-		\submit_button( __( 'Regenerate CSV', 'woocommerce-exporter' ), 'primary', 'submit', false,
+		\submit_button(
+			__( 'Regenerate CSV', 'woocommerce-exporter' ), 'primary', 'submit', false,
 			[
 				'data-default-text' => __( 'Regenerate CSV', 'woocommerce-exporter' ),
 				'data-loading-text' => __( 'Loading...', 'woocommerce-exporter' ),
