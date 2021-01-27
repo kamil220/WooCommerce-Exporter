@@ -19,20 +19,20 @@ class Products {
 	/**
 	 * Get product for export
 	 *
-	 * @todo add chunks
 	 * @param array $args post query args.
 	 * @return array
 	 */
 	public function get_products( $args = [] ) {
 
-		$args = shortcode_atts(
+		$args = wp_parse_args(
+			$args,
 			[
 				'post_type'      => 'product',
-				'posts_per_page' => 100,
+				'posts_per_page' => 50,
 				'orderby'        => 'date',
 				'order'          => 'DESC',
 				'post_status'    => 'any',
-			], $args
+			]
 		);
 
 		return $this->get_products_models( $args );
@@ -44,7 +44,7 @@ class Products {
 	 * @param array $args get posts arguments.
 	 * @return array
 	 */
-	private function get_products_models( $args ) {
+	private function get_products_models( $args = [] ) {
 
 		$woo_products = get_posts( $args );
 		$products     = [];
