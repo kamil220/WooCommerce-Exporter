@@ -18,7 +18,6 @@ class Page {
 	const WOOCOMMERCE_EXPORTER_MENU_SLUG       = 'wpdesk-woocommerce-exporter';
 	const WOOCOMMERCE_EXPORTER_MENU_CAPABILITY = 'manage_options';
 
-
 	/**
 	 * Adds export page submenu.
 	 * Have to be called from admin_menu action.
@@ -39,11 +38,16 @@ class Page {
 	/**
 	 * Add WooCommerce Exporter Page template
 	 *
-	 * @todo Add template loader
-	 *
 	 * @return void
 	 */
 	public function handle_render_woocommerce_exporter_page() {
 		require_once __DIR__ . '/Views/Panel.php';
+	}
+
+	/**
+	 * Handle export service
+	 */
+	public function handle_ajax_woocommerce_exporter_page() {
+		new Export();
 	}
 }
